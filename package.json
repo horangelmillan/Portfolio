@@ -4,7 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:backend": "npm install --prefix backend",
+    "install:frontend": "npm install --prefix frontend",
+    "install:app": "npm-run-all install:backend install:frontend",
+
+    "start:backendev": "npm run dev --prefix backend",
+    "start:frontendev": "npm start --prefix frontend",
+    "start:dev": "npm-run-all --parallel start:backendev start:frontendev",
+
+    "build:frontend": "npm build --prefix frontend",
+    "heroku-postbuild": "npm-run-all install:app build:frontend",
+
+    "start": "npm start --prefix backend"
   },
   "keywords": [],
   "author": "",

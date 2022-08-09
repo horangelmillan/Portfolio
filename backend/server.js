@@ -1,23 +1,23 @@
 const { app } = require('./app');
-
-// Models
-/* const { initModels } = require('./models/initModels'); */
-
 // Utils
-/* const { db } = require('./utils/database.util');
-
-db.authenticate()
-	.then(() => console.log('database authenticated'))
-	.catch(err => console.log(err)); */
-
-/* initModels(); */
-
-/* db.sync()
-	.then(() => console.log('database synced'))
-	.catch(err => console.log(err)); */
+const { db } = require('./utils/database.util');
 
 const PORT = process.env.PORT || 4000;
 
-app.listen(PORT, () => {
-	console.log('Server listening on port: ', PORT);
-});
+const startServer = async () => {
+    try {
+        await db.authenticate()
+            .then(() => console.log('database authenticated'))
+
+        await db.sync()
+            .then(() => console.log('database synced'))
+    } catch (err) {
+        return console.log(err, 'something went wrong and the server cannot be started');
+    };
+
+    app.listen(PORT, () => {
+        console.log('server listening on port: ', PORT);
+    });
+};
+
+startServer();

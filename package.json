@@ -7,14 +7,11 @@
     "install:backend": "npm install --prefix backend",
     "install:frontend": "npm install --prefix frontend",
     "install:app": "npm-run-all install:backend install:frontend",
-
     "start:backendev": "npm run dev --prefix backend",
     "start:frontendev": "npm start --prefix frontend",
     "start:dev": "npm-run-all --parallel start:backendev start:frontendev",
-
     "build:frontend": "npm build --prefix frontend",
     "heroku-postbuild": "npm-run-all install:app build:frontend",
-
     "start": "npm start --prefix backend"
   },
   "keywords": [],
@@ -22,9 +19,12 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
     "react-hook-form": "^7.34.0",
     "react-redux": "^8.0.2",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "sequelize": "^6.21.3"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"

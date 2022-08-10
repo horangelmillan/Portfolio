@@ -8,7 +8,7 @@ const { User } = require('../models/user.model');
 // Utils
 const { catchAsync } = require('../utils/catchAsync.util');
 const { AppError } = require('../utils/appError.util');
-/* const { Email } = require('../utils/email.util'); */
+const { Email } = require('../utils/email.util');
 
 const getAllUsers = catchAsync(async (req, res, next) => {
 	const users = await User.findAll();
@@ -22,25 +22,9 @@ const getAllUsers = catchAsync(async (req, res, next) => {
 const createUser = catchAsync(async (req, res, next) => {
 	const { name, email, password } = req.body;
 
-	// Hash password
-	const salt = await bcrypt.genSalt(12);
-	const hashPassword = await bcrypt.hash(password, salt);
-
-	const newUser = await User.create({
-		name,
-		email,
-		password: hashPassword,
-	});
-
-	// Remove password from response
-	newUser.password = undefined;
-
-	// Send welcome email
-	/* await new Email(email).sendWelcome(name); */
-
 	res.status(201).json({
 		status: 'success',
-		newUser,
+		pepe
 	});
 });
 

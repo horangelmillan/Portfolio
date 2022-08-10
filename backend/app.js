@@ -38,7 +38,6 @@ app.use(morgan(
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 // Define endpoints
 app.use('/api/v1/users', usersRouter);
 app.use('/*', viewsRouter);
@@ -53,6 +52,15 @@ app.all('*', (req, res, next) => {
     );
 });
 
-app.use(globalErrorHandler);
+app.use('*', (err, req, res, next) => {
+    const statusCode = err.statusCode || 500;
 
-module.exports = { app };
+    res.status(statusCode).json({
+        status: statusCode,
+        message: err.message,
+        err,
+        stack: err.stack
+    });
+});
+
+    module.exports = { app };

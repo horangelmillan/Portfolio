@@ -10,7 +10,7 @@ const sendErrorDev = (err, req, res) => {
 		status: 'fail',
 		message: err.message,
 		error: err,
-		stack: err.stack,
+		stack: err.stack
 	});
 };
 
@@ -37,6 +37,7 @@ const handleJWTError = () => {
 
 const globalErrorHandler = (err, req, res, next) => {
 	if (process.env.NODE_ENV === 'development') {
+		console.log('hola');
 		sendErrorDev(err, req, res);
 	} else if (process.env.NODE_ENV === 'production') {
 		let error = { ...err };
@@ -48,7 +49,7 @@ const globalErrorHandler = (err, req, res, next) => {
 			error = handleJWTExpiredError();
 		} else if (err.name === 'JsonWebTokenError') {
 			error = handleJWTError();
-		}
+		};
 
 		sendErrorProd(error, req, res);
 	}

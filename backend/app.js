@@ -21,9 +21,9 @@ const app = express();
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
-app.use(compression());
 app.use(helmet());
+app.use(compression());
+app.use(cors());
 
 app.use(rateLimit({
     max: 10000,
@@ -52,15 +52,6 @@ app.all('*', (req, res, next) => {
     );
 });
 
-app.use('*', (err, req, res, next) => {
-    const statusCode = err.statusCode || 500;
+app.use(globalErrorHandler);
 
-    res.status(statusCode).json({
-        status: statusCode,
-        message: err.message,
-        err,
-        stack: err.stack
-    });
-});
-
-    module.exports = { app };
+module.exports = { app };

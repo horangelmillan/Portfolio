@@ -15,16 +15,29 @@ const getAllUsers = catchAsync(async (req, res, next) => {
 
 	res.status(200).json({
 		status: 'success',
-		users,
+		users
 	});
 });
 
 const createUser = catchAsync(async (req, res, next) => {
 	const { name, email, password } = req.body;
 
+	const salt = await bcrypt.genSalt(12);
+	const hashPassword = await bcrypt.hash(password, salt);
+
+	const newUser = await User.create({
+		name,
+		email,
+		password: hashPassword
+	});
+
+	newUser.password = undefined;
+
+	await new Email(email).sendWelcome(name);
+
 	res.status(201).json({
 		status: 'success',
-		pepe
+		newUser
 	});
 });
 
@@ -33,7 +46,7 @@ const getUserById = catchAsync(async (req, res, next) => {
 
 	res.status(200).json({
 		status: 'success',
-		user,
+		user
 	});
 });
 
@@ -57,12 +70,11 @@ const deleteUser = catchAsync(async (req, res, next) => {
 const login = catchAsync(async (req, res, next) => {
 	const { email, password } = req.body;
 
-	// Validate credentials (email)
 	const user = await User.findOne({
 		where: {
 			email,
-			status: 'active',
-		},
+			status: 'active'
+		}
 	});
 
 	if (!user) {

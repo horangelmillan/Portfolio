@@ -36,7 +36,7 @@ class Email {
     async send(template, subject, context) {
 
         const configEmail = await this.newTransport().use('compile', hbs({
-            extName: 'hbs',
+            extName: '.hbs',
             viewEngine: {
                 partialsDir: path.join(__dirname, '../views/partials'),
                 defaultLayout: false

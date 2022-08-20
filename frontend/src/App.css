@@ -5,6 +5,15 @@
 }
 
 .App {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
+  color: #FFFFFF;
+}
+
+.layout {
+  width: 100vw;
+}
+
+.margin-content {
+  padding-top: 5rem;
 }

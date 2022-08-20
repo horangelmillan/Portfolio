@@ -1,0 +1,36 @@
+.Links {
+    grid-area: lin;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Links span {
+    padding: 0 0.5rem;
+    margin: auto;
+}
+
+.Links a {
+    width: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.Links div {
+    position: absolute;
+    border-bottom: 2px solid rgb(204, 137, 13);
+    height: 1px;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.Links > a:hover > div {
+    width: 5rem;
+}
+
+.crossIn {
+    width: 0;
+}
+
+.crossOut {
+    width: 5rem;
+}

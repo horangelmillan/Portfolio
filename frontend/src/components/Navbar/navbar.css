@@ -1,0 +1,62 @@
+/* Fonts */
+@font-face {
+    font-family: 'Outfit';
+    src: url('../../fonts/Outfit-VariableFont_wght.ttf');
+}
+
+/* Animations transition */
+.fadeOut {
+    opacity: 0;
+    transform: translate(0, -5rem);
+    filter: blur(15px);
+}
+
+.fadeIn {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+    background: linear-gradient(#00000069, transparent);
+    
+}
+
+/* Navbar */
+.Navbar {
+    width: 100%;
+    position: fixed;
+    height: 5rem;
+    display: grid;
+    grid-template-areas:
+        "log lin"
+        "bor bor";
+    align-items: center;
+    transition: all 0.7s;
+    z-index: 9999;
+}
+
+/* Navbar header */
+.Navbar img {
+    grid-area: log;
+    margin-left: 1rem;
+    width: 3rem;
+    position: relative;
+    top: 5px;
+}
+
+.Navbar .header {
+    font-family: 'Outfit';
+    transition: all 0.5s;
+}
+
+.Navbar a {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-right: 1.5rem;
+}
+
+/* Navbar border */
+.Navbar  .border-bottom {
+    grid-area: bor;
+    border-bottom: 0.1px solid rgb(173, 173, 173);
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+}

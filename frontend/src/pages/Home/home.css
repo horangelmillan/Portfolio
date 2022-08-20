@@ -1,0 +1,38 @@
+/* Fonts */
+@font-face {
+    font-family: 'Cinzel';
+    src: url(../../fonts//Cinzel-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(../../fonts/Outfit-VariableFont_wght.ttf);
+}
+
+/* Home */
+.home section:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 5rem);
+    padding: 0 2rem;
+}
+
+.home span:nth-child(1) {
+    color: #f06023;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+.home h1 {
+    font-family: 'Cinzel';
+    color: #FFFFFF;
+    font-size: 4.6rem;
+    margin: 2rem 0;
+}
+
+/* screen */
+
+.home .title {
+    position: absolute;
+}

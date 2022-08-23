@@ -11,6 +11,11 @@ const Home = () => {
                     <span>By Horangel Millan</span>
                 </div>
             </section>
+            <section className="content">
+                <div>
+                    
+                </div>
+            </section>
         </div>
     )
 };

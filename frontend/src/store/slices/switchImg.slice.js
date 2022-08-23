@@ -8,7 +8,7 @@ export const switchImgSlice = createSlice({
             return action.payload;
         }
     }
-})
+});
 
 export const { setSwitchImg } = switchImgSlice.actions;
 

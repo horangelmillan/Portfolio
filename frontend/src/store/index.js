@@ -3,6 +3,7 @@ import nigthLigthMode from './slices/nigthLigthMode.slice';
 import isLoading from './slices/isLoading.slice';
 import isRetract from './slices/isRetract.slice';
 import switchImg from './slices/switchImg.slice';
+import pathLocation from './slices/pathLocation.slice';
 
 
 export default configureStore({
@@ -10,6 +11,8 @@ export default configureStore({
         nigthLigthMode,
         isLoading,
         isRetract,
-        switchImg
+        switchImg,
+        pathLocation
+
     }
 });

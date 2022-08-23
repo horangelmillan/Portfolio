@@ -1,28 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Links from "./components/Links";
+import useScrollNavbar from "../../hooks/useScrollNavbar";
 import logo from '../../images/logo.png';
 import './navbar.css';
 
 const Navbar = () => {
-
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const [isShowNavbar, setIsShowNavbar] = useState(true);
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if ((document.body.getBoundingClientRect()).top >= scrollPosition) {
-                setIsShowNavbar(true);
-            } else {
-                setIsShowNavbar(false);
-            };
-
-            setScrollPosition((document.body.getBoundingClientRect()).top);
-        });
-    });
+    const { isShowNavbar } = useScrollNavbar();
 
     return (
         <div className={`Navbar ${isShowNavbar ? 'fadeIn' : 'fadeOut'}`}>
-            <img src={logo} alt="" />
+            <img src={logo} alt="Horangel Millan" />
             <Links />
             <div className="border-bottom"></div>
         </div>

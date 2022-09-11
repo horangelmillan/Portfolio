@@ -3,8 +3,8 @@
     display: grid;
     height: 100vh;
     width: 100vw;
-    background: url('https://www.enter.co/wp-content/uploads/2015/06/laptop1_1024.jpg') 100%/100% no-repeat fixed;
-    background-size: cover;
+    background: url('https://www.enter.co/wp-content/uploads/2015/06/laptop1_1024.jpg') no-repeat 100%/100% fixed;
+    object-fit: cover;
     z-index: 0;
 }
 

@@ -22,3 +22,32 @@ html {
 .margin-content {
   padding-top: 5rem;
 }
+
+.margin-content > div {
+  position: absolute;
+}
+
+@keyframes fadeOut-left {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+}
+
+.margin-content > div {
+  animation: fadeIn-rigth 1s;
+  transition: all 1s;
+}
+
+@keyframes fadeIn-rigth {
+  from {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

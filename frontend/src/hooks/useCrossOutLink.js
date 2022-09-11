@@ -7,7 +7,7 @@ const useCrossOutLink = (refs) => {
 
     useEffect(() => {
         refs.forEach(ref => {
-            if (location.pathname === ref.current.getAttribute('href')) {
+            if (location.pathname === ref.current.dataset.link) {
                 ref.current.children[1].setAttribute('class', 'crossOut');
             } else {
                 ref.current.children[1].setAttribute('class', 'crossIn');

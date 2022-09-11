@@ -5,7 +5,6 @@ import isRetract from './slices/isRetract.slice';
 import switchImg from './slices/switchImg.slice';
 import pathLocation from './slices/pathLocation.slice';
 
-
 export default configureStore({
     reducer: {
         nigthLigthMode,
@@ -13,6 +12,5 @@ export default configureStore({
         isRetract,
         switchImg,
         pathLocation
-
     }
 });

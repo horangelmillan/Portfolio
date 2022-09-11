@@ -5,9 +5,7 @@ import useNormalizePath from "./hooks/useNormalizePath";
 import useNormalizeTranslate from "./hooks/useNormlizeTranslate";
 import './links.css';
 
-const Links = () => {
-
-    // useImperativeHandle and useContext
+const Links = ({ contentRef }) => {
 
     const navigate = useNavigate();
 
@@ -15,6 +13,13 @@ const Links = () => {
     const ref2 = useRef();
     const ref3 = useRef();
     const ref4 = useRef();
+
+    const navigateAction = (to) => {
+        contentRef.current.style.animation = 'fadeOut-left 1s';
+        setTimeout(() => {
+            navigate(to);
+        }, 900);
+    };
 
     useNormalizeTranslate();
 
@@ -24,10 +29,10 @@ const Links = () => {
 
     return (
         <ul className="Links">
-            <button ref={ref1} data-link="/" onClick={() => navigate('/')}><span>HOME</span><div></div></button>
-            <button ref={ref2} data-link="/me" onClick={() => navigate('/me')}><span>ABOUT</span><div></div></button>
-            <button ref={ref3} data-link="/projects" onClick={() => navigate('/projects')}><span>WORK</span><div></div></button>
-            <button ref={ref4} data-link="/contact" onClick={() => navigate('/contact')}><span>CONTACT</span><div></div></button>
+            <button ref={ref1} data-link="/" onClick={() => navigateAction('/')}><span>HOME</span><div></div></button>
+            <button ref={ref2} data-link="/me" onClick={() => navigateAction('/me')}><span>ABOUT</span><div></div></button>
+            <button ref={ref3} data-link="/projects" onClick={() => navigateAction('/projects')}><span>WORK</span><div></div></button>
+            <button ref={ref4} data-link="/contact" onClick={() => navigateAction('/contact')}><span>CONTACT</span><div></div></button>
         </ul>
     );
 };

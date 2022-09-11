@@ -6,6 +6,8 @@ const RetractImg = () => {
     const isRetract = useSelector(state => state.isRetract);
     const imgSwuitched = useSelector(state => state.switchImg);
 
+    
+
     return (
         <div className="retract-img" style={{background: `url('${imgSwuitched}') 100%/100% no-repeat fixed`}}>
             <ul>

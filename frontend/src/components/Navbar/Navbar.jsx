@@ -4,13 +4,13 @@ import useScrollNavbar from "../../hooks/useScrollNavbar";
 import logo from '../../images/logo.png';
 import './navbar.css';
 
-const Navbar = () => {
+const Navbar = ({contentRef}) => {
     const { isShowNavbar } = useScrollNavbar();
-
+    
     return (
         <div className={`Navbar ${isShowNavbar ? 'fadeIn' : 'fadeOut'}`}>
             <img src={logo} alt="Horangel Millan" />
-            <Links />
+            <Links contentRef={contentRef}/>
             <div className="border-bottom"></div>
         </div>
     );

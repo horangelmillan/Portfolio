@@ -1,9 +1,19 @@
-import React from "react";
+import React, { forwardRef, useImperativeHandle, useRef } from "react";
+import './contact.css';
 
-const Contact = () => {
+const Contact = forwardRef(({ props }, ref) => {
+
+    const refContact = useRef();
+
+    useImperativeHandle(ref, () => {
+        return refContact.current;
+    });
+
     return (
-        <h1>Contact</h1>
+        <div ref={refContact}>
+            <h1>Contact</h1>
+        </div>
     );
-};
+});
 
 export default Contact;

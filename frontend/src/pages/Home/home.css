@@ -10,12 +10,21 @@
 }
 
 /* Home */
-.home section:nth-child(1) {
+.home section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - 5rem);
     padding: 0 2rem;
+}
+
+.home section:nth-child(1) {
+    height: calc(100vh - 5rem);
+}
+
+.home section:nth-child(2) {
+    background: #000000;
+    text-align: justify;
 }
 
 .home span:nth-child(1) {
@@ -29,4 +38,15 @@
     color: #FFFFFF;
     font-size: 4.6rem;
     margin: 2rem 0;
+}
+
+.home p {
+    color: #f06023;
+    font-size: x-large;
+}
+
+.border-corner {
+    padding: 15% 3%;
+    border-radius: 50px;
+    transition: box-shadow 1s;
 }

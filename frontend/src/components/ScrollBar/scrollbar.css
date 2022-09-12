@@ -1,0 +1,28 @@
+.ScrollBar {
+    position: fixed;
+    width: 15px;
+    height: calc(100vh - 30px - 5rem);
+    background-color: rgba(240, 248, 255, 0.384);
+    transform: translate(0, 10px);
+    z-index: 99999999999;
+    right: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.ScrollBar .thund {
+    margin: 5px 0;
+    height: 5rem;
+    width: 60%;
+    background-color: rgb(228, 151, 8);
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.ScrollBar .thund:hover {
+    background-color: rgb(252, 167, 9);
+    box-shadow: 0 0 10px rgb(253, 167, 7);
+    scale: 1.1;
+}

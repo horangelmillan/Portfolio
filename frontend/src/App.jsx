@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home, Me, Projects, Contact } from './pages/index';
-import { Navbar, RetractImgs } from './components/index';
+import { Navbar, RetractImgs, ScrollBar } from './components/index';
 import { useRef } from 'react';
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
           </div>
         </div>
       </BrowserRouter>
+      <ScrollBar />
     </div>
   );
 };

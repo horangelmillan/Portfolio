@@ -39,7 +39,7 @@ html {
 
 .margin-content > div {
   animation: fadeIn-rigth 1s;
-  transition: all 1s;
+  transition: all 2s;
 }
 
 @keyframes fadeIn-rigth {
@@ -50,4 +50,8 @@ html {
   to {
     opacity: 1;
   }
+}
+
+html {
+  overflow-x: hidden;
 }

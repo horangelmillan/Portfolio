@@ -18,8 +18,18 @@ const Home = forwardRef(({ props }, ref) => {
                     <span>By Horangel Millan</span>
                 </div>
             </section>
+
+            <section className="introduction">
+                <div className="hide_border-corner">
+                    <div className="border-corner">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia delectus maiores aliquam? Id perferendis sunt repudiandae eius sit alias aliquid ullam ratione, optio tempore a culpa inventore corporis magni eligendi!
+                        </p>
+                    </div>
+                </div>
+            </section>
         </div>
-    )
+    );
 });
 
 export default Home;

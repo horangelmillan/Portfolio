@@ -8,21 +8,21 @@
     right: 15px;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    display: none;
 }
 
 .ScrollBar .thund {
+    position: absolute;
     margin: 5px 0;
     height: 5rem;
     width: 60%;
     background-color: rgb(228, 151, 8);
     border-radius: 10px;
-    transition: all 0.5s;
     cursor: pointer;
+    transition: box-shadow 0.5s, width 0.3s;
 }
 
 .ScrollBar .thund:hover {
-    background-color: rgb(252, 167, 9);
-    box-shadow: 0 0 10px rgb(253, 167, 7);
-    scale: 1.1;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(228, 151, 8, 0.753);
 }

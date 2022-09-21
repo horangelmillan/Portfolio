@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
     font-family: 'Cinzel';
-    src: url(../../fonts//Cinzel-Regular.ttf);
+    src: url(../../fonts/Cinzel-Regular.ttf);
 }
 
 @font-face {
@@ -10,27 +10,57 @@
 }
 
 /* Home */
-.home section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 2rem;
-}
-
-.home section:nth-child(1) {
-    height: calc(100vh - 5rem);
-}
-
 .home section:nth-child(2) {
     background: #000000;
     text-align: justify;
+}
+
+.home section:nth-child(2) p {
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-bottom: 5rem;
+}
+
+.home section:nth-child(2) span {
+    font-size: 15px;
+    margin-bottom: 5rem;
+}
+
+.home section:nth-child(2) button {
+    cursor: pointer;
+    width: max-content;
+    border: none;
+    background: none;
+    color: #FFFFFF;
+}
+
+.home section:nth-child(2) button span {
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.home section:nth-child(2) button div {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-bottom: 2px solid rgb(214, 140, 3);
+    width: 0;
+    bottom: 0.6rem;
+    transition: all 0.5s;
+}
+
+.home section:nth-child(2) button:hover div {
+    width: 15rem;
 }
 
 .home span:nth-child(1) {
     color: #f06023;
     letter-spacing: 5px;
     font-size: 12px;
+}
+
+.home section:nth-child(3) {
+    background: #FFFFFF;
 }
 
 .home h1 {

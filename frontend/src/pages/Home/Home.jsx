@@ -20,13 +20,19 @@ const Home = forwardRef(({ props }, ref) => {
             </section>
 
             <section className="introduction">
-                <div className="hide_border-corner">
-                    <div className="border-corner">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia delectus maiores aliquam? Id perferendis sunt repudiandae eius sit alias aliquid ullam ratione, optio tempore a culpa inventore corporis magni eligendi!
-                        </p>
-                    </div>
-                </div>
+                <span>Yo</span>
+
+                <p>
+                    Hola. Soy Horangel Millan, un creativo desarrollador web Full-Stack,
+                    apasionado por el diseño interactivo y la tecnologia, busco profecionalizarme
+                    en las distintas areas de la programacion.
+                </p>
+
+                    <button><span>MAS SOBRE MÍ</span><div></div></button>
+            </section>
+
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, veritatis laboriosam assumenda commodi vitae adipisci incidunt quae maiores nisi dignissimos libero eum suscipit fugiat aspernatur obcaecati quia magni, nam eius voluptatum dolorem, totam saepe. Nobis possimus nesciunt harum repudiandae, similique cupiditate ducimus provident consequuntur atque officia nihil facilis ab aliquam.</p>
             </section>
         </div>
     );

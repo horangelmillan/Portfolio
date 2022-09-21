@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { firstLoad } from "../../../../store/slices/isRetract.slice";
 
 const useNormalizeTranslate = () => {
     const dispatch = useDispatch();
-
-    const currentTranslate = useSelector(state => state.isRetract);
 
     const location = useLocation();
 
@@ -19,7 +17,7 @@ const useNormalizeTranslate = () => {
                 setIsNormalize(true);
             };
         };
-    }, [location, currentTranslate, dispatch, isNormalize, setIsNormalize]);
+    }, [location, dispatch, isNormalize, setIsNormalize]);
 };
 
 export default useNormalizeTranslate;

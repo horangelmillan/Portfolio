@@ -11,7 +11,9 @@ const Me = forwardRef(({ props }, ref) => {
 
     return (
         <div className='Me' ref={meRef}>
-            <h1>Me</h1>
+            <section className='main'>
+                <h1>Me</h1>
+            </section>
         </div>
     );
 });

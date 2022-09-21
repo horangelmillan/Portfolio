@@ -1,25 +1,18 @@
 import React, { useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import useCrossOutLink from "../../../hooks/useCrossOutLink";
+import useNavigateAction from "./hooks/useNavigateAction";
 import useNormalizePath from "./hooks/useNormalizePath";
 import useNormalizeTranslate from "./hooks/useNormlizeTranslate";
 import './links.css';
 
 const Links = ({ contentRef }) => {
 
-    const navigate = useNavigate();
-
     const ref1 = useRef();
     const ref2 = useRef();
     const ref3 = useRef();
     const ref4 = useRef();
 
-    const navigateAction = (to) => {
-        contentRef.current.style.animation = 'fadeOut-left 1s';
-        setTimeout(() => {
-            navigate(to);
-        }, 900);
-    };
+    const navigateAction = useNavigateAction(contentRef);
 
     useNormalizeTranslate();
 

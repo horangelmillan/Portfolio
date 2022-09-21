@@ -15,7 +15,7 @@
     opacity: 1;
     backdrop-filter: blur(1px);
     background: linear-gradient(#00000069, transparent);
-    
+
 }
 
 /* Navbar */
@@ -30,6 +30,19 @@
     align-items: center;
     transition: all 0.7s;
     z-index: 9999;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: none;
+    }
+
+    to {
+        opacity: 1;
+        backdrop-filter: blur(1px);
+        background: linear-gradient(#00000069, transparent);
+    }
 }
 
 /* Navbar header */
@@ -53,7 +66,7 @@
 }
 
 /* Navbar border */
-.Navbar  .border-bottom {
+.Navbar .border-bottom {
     grid-area: bor;
     border-bottom: 0.1px solid rgb(173, 173, 173);
     width: 90%;

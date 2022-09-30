@@ -1,0 +1,16 @@
+.Navbar svg {
+    cursor: pointer;
+    margin: 0.5rem 0 0.5rem 2rem;
+}
+
+.Navbar .group1, .group2 {
+    transition: all 0.5s;
+}
+
+.Navbar svg:hover .group1 {
+    transform: translate(90px, 90px);
+}
+
+.Navbar svg:hover .group2 {
+    transform: translate(-90px, -90px);
+}

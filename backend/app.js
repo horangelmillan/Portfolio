@@ -9,6 +9,7 @@ const cors = require('cors');
 // Routers
 const { usersRouter } = require('./routes/users.routes');
 const { viewsRouter } = require('./routes/views.routes');
+const { managerRoute } = require('./routes/managers.routes');
 
 // Global err controller
 const { globalErrorHandler } = require('./controllers/error.controller');
@@ -22,6 +23,9 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({
+    policy: 'cross-origin'
+}))
 app.use(compression());
 app.use(cors());
 
@@ -40,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define endpoints
 app.use('/api/v1/users', usersRouter);
+app.use('/api/v1/management', managerRoute);
 app.use('/*', viewsRouter);
 
 // Handle incoming unknown routes to the server

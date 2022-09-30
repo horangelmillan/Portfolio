@@ -15,7 +15,6 @@
     opacity: 1;
     backdrop-filter: blur(1px);
     background: linear-gradient(#00000069, transparent);
-
 }
 
 /* Navbar */
@@ -46,12 +45,10 @@
 }
 
 /* Navbar header */
-.Navbar img {
+.Navbar svg {
     grid-area: log;
     margin-left: 1rem;
-    width: 3rem;
     position: relative;
-    top: 5px;
 }
 
 .Navbar .header {
@@ -72,4 +69,6 @@
     width: 90%;
     margin: 0 auto;
     padding: 0;
+    position: relative;
+    top: -4px;
 }

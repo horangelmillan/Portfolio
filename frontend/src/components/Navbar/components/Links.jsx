@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import useCrossOutLink from "../../../hooks/useCrossOutLink";
+import useCrossOutLink from "./hooks/useCrossOutLink";
 import useNavigateAction from "./hooks/useNavigateAction";
 import useNormalizePath from "./hooks/useNormalizePath";
 import useNormalizeTranslate from "./hooks/useNormlizeTranslate";

@@ -1,4 +1,7 @@
 import React, { forwardRef, useImperativeHandle, useRef } from "react";
+import Button from "../../components/Button/Button";
+import ArrowDown from "../../components/SVG/ArrowDown/ArrowDown";
+import LeaveParticles from "../../components/Autumn_Leaves/LeavesParticles";
 import './home.css';
 
 const Home = forwardRef(({ props }, ref) => {
@@ -17,22 +20,28 @@ const Home = forwardRef(({ props }, ref) => {
                     <h1>Full-Stack Web Development,<br />Design & Animation.</h1>
                     <span>By Horangel Millan</span>
                 </div>
+
+                <a href="#aboutMe"><ArrowDown href="#aboutMe" /></a>
             </section>
 
-            <section className="introduction">
+            <section className="introduction" id="aboutMe">
                 <span>Yo</span>
 
                 <p>
-                    Hola. Soy Horangel Millan, un creativo desarrollador web Full-Stack,
-                    apasionado por el diseño interactivo y la tecnologia, busco profecionalizarme
-                    en las distintas areas de la programacion.
+                    Hola. Soy Horangel Millan, un creativo desarrollador web Full-Stack, creo, diseño
+                    y desarrollo para darle valor a tu producto.
                 </p>
 
-                    <button><span>MAS SOBRE MÍ</span><div></div></button>
+                <Button>
+                    MAS SOBRE MÍ
+                </Button>
+
             </section>
 
             <section>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, veritatis laboriosam assumenda commodi vitae adipisci incidunt quae maiores nisi dignissimos libero eum suscipit fugiat aspernatur obcaecati quia magni, nam eius voluptatum dolorem, totam saepe. Nobis possimus nesciunt harum repudiandae, similique cupiditate ducimus provident consequuntur atque officia nihil facilis ab aliquam.</p>
+
+                <LeaveParticles lot={20} scrollActive={true} LeaveRef={'homeRef'}/>
+
             </section>
         </div>
     );

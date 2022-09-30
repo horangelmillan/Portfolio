@@ -3,14 +3,20 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home, Me, Projects, Contact } from './pages/index';
 import { Navbar, RetractImgs, ScrollBar } from './components/index';
 import { useRef } from 'react';
+import { ArrowDown } from './components/index';
+import useScrollData from './hooks/useScrollData2';
+import Modal from './components/Modal/Modal';
 
 function App() {
 
   const contentRef = useRef();
 
+  useScrollData();
+
   return (
     <div className='App'>
       <BrowserRouter>
+        <Modal />
         <Navbar contentRef={contentRef} />
         <div className='layout'>
           <RetractImgs />
@@ -24,6 +30,10 @@ function App() {
           </div>
         </div>
       </BrowserRouter>
+      <ArrowDown
+        classNameProps={true}
+        action={true}
+      />
       <ScrollBar />
     </div>
   );

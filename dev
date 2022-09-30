@@ -1,7 +1,12 @@
-求esea terminar el trabajo por lotes (S/N)? 求esea terminar el trabajo por lotes (S/N)? 
-求esea terminar el trabajo por lotes (S/N)? 求esea terminar el trabajo por lotes (S/N)? 求esea terminar el trabajo por lotes (S/N)? 
 
 > portfolio@1.0.0 start
 > npm start --prefix backend
 
+
+> backend@1.0.0 start
+> set NODE_ENV=production&& node server.js
+
+database authenticated
+database synced
+server listening on port:  4000
 求esea terminar el trabajo por lotes (S/N)? 

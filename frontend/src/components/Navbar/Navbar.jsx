@@ -1,34 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Logo from "../SVG/Logo/Logo";
 import Links from "./components/Links";
-import useScrollNavbar from "../../hooks/useScrollNavbar";
-import logo from '../../images/logo.png';
+import useScrollNavbar from "./hooks/useScrollNavbar";
 import './navbar.css';
 
 const Navbar = ({ contentRef }) => {
     const { isShowNavbar } = useScrollNavbar();
 
-    /* --------------------------------------------------------------------------------- */
-    /* Logica para scrollbar */
-
-    const [screenWidth, setScreenWidth] = useState(null);
-
-    useEffect(() => {
-        window.addEventListener('resize', () => {
-            setScreenWidth(window.innerWidth);
-            console.log(window.innerWidth);
-        });
-
-        return window.removeEventListener('resize', () => {
-            setScreenWidth(window.innerWidth);
-            console.log(window.innerWidth);
-        });
-    }, []);
-
-    /* ------------------------------------------------------------------------------------ */
-
     return (
         <div className={`Navbar ${isShowNavbar ? 'fadeIn' : 'fadeOut'}`}>
-            <img src={logo} alt="Horangel Millan" />
+            <Logo size={"50px"} />
             <Links contentRef={contentRef} />
             <div className="border-bottom"></div>
         </div>

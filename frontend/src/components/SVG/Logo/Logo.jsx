@@ -8,7 +8,7 @@ const Logo = ({ size }) => {
     const dispatch = useDispatch();
 
     return (
-        <svg onClick={() => dispatch(setIsShowModal(true))} width={size} height={size} viewBox="0 0 140 140" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+        <svg onClick={() => dispatch(setIsShowModal({ title: 'Login' }))} width={size} height={size} viewBox="0 0 140 140" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient gradientUnits="userSpaceOnUse" x1="-1.6841931E-06" y1="100.00015" x2="100" y2="100" id="Grad1">
                     <stop offset="9.876543%" stopColor="#000000" />

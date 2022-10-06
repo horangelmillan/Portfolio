@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from 'axios';
-
 import './Management.css';
 
 const Management = () => {
 
-    const [urlImage, setImageUrl] = useState('http://localhost:4000/temporal/pepex.png');
+    const [urlImage, setImageUrl] = useState();
     const [inputUrl, setInputUrl] = useState();
     const [inputTitle, setInputTitle] = useState();
 

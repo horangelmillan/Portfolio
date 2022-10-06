@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useAwaitAnimation = (ref, state, time, modeOn, classAnimation, actions, outActions) => {
+const useAwaitAnimation = (ref, state, time, modeOn, classAnimation, actions) => {
 
     const [animateClass, setAnimateClass] = useState();
 
@@ -9,15 +9,11 @@ const useAwaitAnimation = (ref, state, time, modeOn, classAnimation, actions, ou
 
         setTimeout(() => {
             ref.current.style.display = state ? modeOn : 'none';
-
-            if (!state) {
-                return outActions && outActions();
-            };
             
-            actions && actions();
+            actions && actions(state);
         }, state ? time * 1000 : time * 900);
 
-    }, [ref, state, time, modeOn, classAnimation, actions, outActions]);
+    }, [ref, state, time, modeOn, classAnimation, actions]);
 
     return { animateClass };
 };

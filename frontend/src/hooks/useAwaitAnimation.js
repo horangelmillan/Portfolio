@@ -11,7 +11,7 @@ const useAwaitAnimation = (ref, state, time, modeOn, classAnimation, actions) =>
             ref.current.style.display = state ? modeOn : 'none';
             
             actions && actions(state);
-        }, state ? time * 1000 : time * 900);
+        }, state ? 0 : time * 900);
 
     }, [ref, state, time, modeOn, classAnimation, actions]);
 

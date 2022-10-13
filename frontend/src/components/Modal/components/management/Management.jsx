@@ -18,6 +18,7 @@ const Management = () => {
 
     return (
         <div className="Management">
+            <h2 className="title">Projects manager</h2>
             <input type="text" onChange={e => setInputUrl(e.target.value)} />
             <input type="text" onChange={e => setInputTitle(e.target.value)} />
             <button onClick={submmit}>summit</button>

@@ -22,15 +22,15 @@ const takeScreenshot = catchAsync(async (req, res, next) => {
         deviceScaleFactor: 1
     });
 
-    const path = `./public/temporal/${title}.png`;
+    const path = `./public/temporal/${title}.jpg`;
 
     await page.goto(urlDeploy, { waitUntil: 'networkidle0' });
 
-    await page.screenshot({ path });
+    await page.screenshot({ path, type: 'jpeg'});
 
     await browser.close();
 
-    req.body.imageTemp = `http://localhost:4000/temporal/${title}.png`;
+    req.body.imageTemp = `http://localhost:4000/temporal/${title}.jpg`;
     next();
 });
 

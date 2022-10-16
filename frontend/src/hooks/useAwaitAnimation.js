@@ -9,8 +9,9 @@ const useAwaitAnimation = (ref, state, time, modeOn, classAnimation, actions) =>
 
         setTimeout(() => {
             ref.current.style.display = state ? modeOn : 'none';
-            
+
             actions && actions(state);
+
         }, state ? 0 : time * 900);
 
     }, [ref, state, time, modeOn, classAnimation, actions]);

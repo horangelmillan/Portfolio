@@ -12,6 +12,11 @@ const useSwitchComponents = () => {
     const [component, setComponent] = useState();
 
     useEffect(() => {
+        console.log('se ejecuta')
+
+        if (component?.type.name === modalContent) {
+            return
+        };
 
         switch (modalContent) {
             case "Login": return setComponent(<Login />)
@@ -21,7 +26,7 @@ const useSwitchComponents = () => {
             default:
         };
 
-    }, [modalContent])
+    }, [modalContent, component])
 
     return { component };
 };

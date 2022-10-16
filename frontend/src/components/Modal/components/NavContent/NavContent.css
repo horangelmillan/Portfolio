@@ -1,0 +1,26 @@
+.NavContent {
+    position: relative;
+    color: orange;
+    height: 75%;
+    width: 10%;
+    border: 1px solid orange;
+    margin-right: 1rem;
+    z-index: 999999999999999999999999999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 1s;
+    overflow: hidden;
+    font-family: 'Cinzel';
+}
+
+.NavContent:hover {
+    border: 0px;
+    margin-right: 0;
+    width: 0%;
+}
+
+.NavContent p {
+    white-space: none;
+}

@@ -1,4 +1,5 @@
 import useSwitchComponents from '../../hooks/useSwitchComponents';
+import './Contents.css';
 
 const Contents = ({ modalState, closeModal }) => {
 

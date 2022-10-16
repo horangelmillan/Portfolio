@@ -17,7 +17,7 @@ const User = db.define('user', {
 		type: DataTypes.STRING,
 		allowNull: false
 	},
-    age: {
+	age: { /* translate to profile */
         type: DataTypes.INTEGER,
         allowNull: true
     },
@@ -29,7 +29,12 @@ const User = db.define('user', {
 		type: DataTypes.STRING,
 		allowNull: false,
 		defaultValue: 'active'
-	}
+	}/* ,
+	rol: {
+		type: DataTypes.STRING,
+		allowNull: false,
+		defaultValue: 'user'
+	} */
 });
 
 module.exports = { User };

@@ -40,7 +40,7 @@ const Home = forwardRef(({ props }, ref) => {
 
             <section>
 
-                <LeaveParticles lot={20} scrollActive={true} LeaveRef={'homeRef'}/>
+                <LeaveParticles lot={20} elementActive={true} LeaveRef={'homeRef'}/>
 
             </section>
         </div>

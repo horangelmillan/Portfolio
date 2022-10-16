@@ -4,6 +4,8 @@ import useAwaitAnimation from "../../hooks/useAwaitAnimation";
 import { setIsShowModal } from '../../store/slices/isShowModal.slice';
 import LeaveParticles from "../Autumn_Leaves/LeavesParticles";
 import Contents from "./components/Contents/Contents";
+import NavContent from './components/NavContent/NavContent';
+import useVerifyToken from "./hooks/useVerifyToken";
 import './Modal.css';
 
 const Modal = () => {
@@ -17,6 +19,8 @@ const Modal = () => {
     const modalActions = (state) => {
         document.body.style.overflowY = state ? 'hidden' : '';
     };
+
+    useVerifyToken(isShowModal);
 
     const { animateClass } = useAwaitAnimation(
         layoutRef,
@@ -37,7 +41,9 @@ const Modal = () => {
             className={`Layout ${animateClass}`}
         >
 
-            <LeaveParticles lot={25} modalActive={isShowModal} LeaveRef={'modalRef'} />
+            <LeaveParticles lot={25} elementActive={isShowModal} LeaveRef={'modalRef'} />
+
+            <NavContent />
 
             <Contents modalState={isShowModal} closeModal={closeModal} />
 

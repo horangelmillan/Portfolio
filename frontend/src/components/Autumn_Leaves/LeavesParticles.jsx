@@ -3,7 +3,7 @@ import Leaves from "../SVG/AutumnLeaves/AutumnLeaves";
 import useActiveWithScroll from "./hooks/useActiveWithScroll";
 import './LeaveParticles.css';
 
-const LeaveParticles = ({ lot, scrollActive, modalActive, LeaveRef }) => {
+const LeaveParticles = ({ lot, elementActive, LeaveRef }) => {
 
     const [LeaveParticles, setLeaveParticles] = useState([]);
 
@@ -13,7 +13,13 @@ const LeaveParticles = ({ lot, scrollActive, modalActive, LeaveRef }) => {
 
     useEffect(() => {
 
-        LeaveRef.current.innerHTML = '';
+        if (!elementActive) {
+            return () => {
+                if (LeaveRef) {
+                    LeaveRef.current.innerHTML = '';
+                };
+            };
+        };
 
         const colors = ["#E7C5B1", "#C98025", "#C64B0D", "#A62522", "5A0609", "#9E2835", "#6B1B24", "#EB818D", "#AE6069"];
 
@@ -60,9 +66,9 @@ const LeaveParticles = ({ lot, scrollActive, modalActive, LeaveRef }) => {
             setLeaveParticles(LeaveParticles);
         };
 
-        scrollActive ? (active && GenerateLeaveRandom()) : (modalActive && GenerateLeaveRandom())
+        elementActive && GenerateLeaveRandom();
 
-    }, [LeaveParticles, lot, setLeaveParticles, active, LeaveRef, scrollActive, modalActive]);
+    }, [LeaveParticles, lot, setLeaveParticles, active, LeaveRef, elementActive]);
 
 
 

@@ -12,10 +12,12 @@ const modalContentSlice = createSlice({
 
 export const { setModalContent } = modalContentSlice.actions;
 
-export const waitAnimationContent = content => dispatch => {
+export const waitAnimationContent = (content, options = { seconds: 1, ref: null }) => dispatch => {
+    options.ref && (options.ref.current.style.animation = `fadeOut ${options.seconds}s`);
+
     setTimeout(() => {
         dispatch(setModalContent(content));
-    }, 5000);
+    }, options.seconds * 1000);
 };
 
 export default modalContentSlice.reducer;

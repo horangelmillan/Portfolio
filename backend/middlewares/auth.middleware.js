@@ -23,9 +23,7 @@ const protectSession = catchAsync(async (req, res, next) => {
     };
 
     const decoded = await jwt.verify(token, process.env.JWT_SECRET);
-    // { id, ... }
-
-    // Check in db that user still exists
+    
     const user = await User.findOne({
         where: { id: decoded.id, status: 'active' },
     });

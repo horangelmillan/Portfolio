@@ -43,7 +43,7 @@ const Modal = () => {
 
             <LeaveParticles lot={25} elementActive={isShowModal} LeaveRef={'modalRef'} />
 
-            <NavContent />
+            <NavContent isShowModal={isShowModal}/>
 
             <Contents modalState={isShowModal} closeModal={closeModal} />
 

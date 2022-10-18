@@ -10,7 +10,7 @@
 .btn_close > span {
     position: absolute;
     right: 0;
-    margin: 1.5rem 1.5rem 0 0;
+    margin: 0.5rem 1.5rem 0 0;
     font-family: 'Outfit';
     font-weight: 800;
     font-size: large;
@@ -33,8 +33,10 @@
     width: 100vw;
     height: 100vh;
     z-index: 999999;
+    background: #0000006e;
     backdrop-filter: blur(2px);
     display: none;
+    padding: 0 0.5rem;
 }
 
 .Modal {
@@ -44,9 +46,9 @@
     border-radius: 2rem;
     background-color: aliceblue;
     height: 80%;
-    width: 85%;
+    width: 84%;
     z-index: 99999999;
-    transition: all 5s;
+    transition: all 1s;
     padding: 1rem;
 }
 

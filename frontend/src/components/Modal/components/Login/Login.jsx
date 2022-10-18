@@ -7,7 +7,7 @@ import './Login.css';
 
 const Login = () => {
 
-    const LoginRef = useRef();
+    const loginRef = useRef();
 
     const dispatch = useDispatch();
 
@@ -17,12 +17,15 @@ const Login = () => {
         axios.post('http://localhost:4000/api/v1/users/login', credentials)
             .then(res => {
                 localStorage.setItem('token', res.data.token);
-                dispatch(waitAnimationContent('Profile', { ref: LoginRef }));
+                dispatch(waitAnimationContent('Profile', { ref: loginRef }));
+            })
+            .catch(err => {
+                console.log(err.response.data);
             });
     };
 
     return (
-        <div className="Login">
+        <div className="Login" ref={loginRef}>
             <h2 className="title">Login</h2>
             <form onSubmit={handleSubmit(data => login(data))}>
                 <label htmlFor="email">

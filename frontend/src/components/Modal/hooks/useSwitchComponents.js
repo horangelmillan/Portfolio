@@ -12,7 +12,6 @@ const useSwitchComponents = () => {
     const [component, setComponent] = useState();
 
     useEffect(() => {
-        console.log('se ejecuta')
 
         if (component?.type.name === modalContent) {
             return

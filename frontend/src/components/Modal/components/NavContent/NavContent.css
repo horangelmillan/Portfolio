@@ -1,26 +1,73 @@
 .NavContent {
     position: relative;
-    color: orange;
     height: 75%;
-    width: 10%;
-    border: 1px solid orange;
-    margin-right: 1rem;
+    width: 0%;
+    margin-right: 0;
     z-index: 999999999999999999999999999999;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    transition: all 1s;
+    transition: all 0.5s;
     overflow: hidden;
     font-family: 'Cinzel';
+    font-size: large;
 }
 
-.NavContent:hover {
-    border: 0px;
+/* .NavContent:hover {
     margin-right: 0;
     width: 0%;
-}
+} */
+
+.title_content {
+    display: flex;
+    justify-content: center;
+} 
 
 .NavContent p {
-    white-space: none;
+    margin-top: 0.5rem;
+    color: #FFFFFF;
+    height: 0;
+    white-space: nowrap;
+    transition: all 0.5s;
+}
+
+.NavContent p:hover {
+    text-shadow: 0 0 5px #FFFFFF;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.NavContent div:last-child p {
+    color: rgb(255, 115, 0);
+}
+
+.NavContent div:last-child p:hover {
+    text-shadow: 0 0 5px rgb(255, 115, 0);
+}
+
+.NavContent svg {
+    transition: all 0.5s;
+}
+
+.svgAnimateHover:hover svg {
+    transform: rotate(45deg) !important;
+}
+
+@keyframes fadeInRotate {
+    from {
+        transform: rotate(180deg) scale(0) translate(0, 100px);
+    }
+    to {
+        transform: rotate() scale(1);
+    }
+}
+
+@keyframes translateTo {
+    from {
+        transform: translate(-30px, 0);
+    }
+    to {
+
+    }
 }

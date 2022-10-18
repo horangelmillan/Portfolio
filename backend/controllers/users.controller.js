@@ -88,13 +88,13 @@ const login = catchAsync(async (req, res, next) => {
 	}
 
 	const token = await jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
-		expiresIn: '30d',
+		expiresIn: process.env.NODE_ENV === 'production' ? '1d' : '1min'
 	});
     
 	res.status(200).json({
 		status: 'success',
 		token,
-		user,
+		user
 	});
 });
 
@@ -105,7 +105,7 @@ const checkToken = catchAsync(async (req, res, next) => {
 
 	res.status(200).json({
 		status: 'success',
-		user: sessionUser,
+		user: sessionUser
 	});
 });
 

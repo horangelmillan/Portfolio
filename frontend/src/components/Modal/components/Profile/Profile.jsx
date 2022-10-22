@@ -16,6 +16,22 @@ const Profile = () => {
 
             <img src="" alt="" />
 
+            <div className='list_manages'>
+                <ul className='direction_column'>
+
+                    <div className='card_manage'>
+                    </div>
+                    <div className='card_manage'>
+                    </div>
+                    <div className='card_manage'>
+                    </div>
+                    <div className='card_manage'>
+                    </div>
+                </ul>
+
+                <div className='gradient'></div>
+            </div>
+
             <button onClick={() => dispatch(waitAnimationContent('Management', { ref: profileRef }))}>
                 management
             </button>

@@ -13,8 +13,7 @@ const useAwaitAnimation = (ref, state, time, modeOn, classAnimation, actions) =>
             actions && actions(state);
 
         }, state ? 0 : time * 900);
-
-    }, [ref, state, time, modeOn, classAnimation, actions]);
+    }, [ref, state, time, modeOn, classAnimation, actions, animateClass]);
 
     return { animateClass };
 };

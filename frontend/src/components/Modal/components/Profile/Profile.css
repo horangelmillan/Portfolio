@@ -1,0 +1,45 @@
+.Profile .card_manage {
+    height: 6rem !important;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.219);
+    transition: box-shadow 0.3s;
+    position: relative;
+    z-index: 4;
+    margin: 0 0 0.75rem 0;
+    background-color: #FFFFFF;
+    background: #FFFFFF;
+}
+
+.Profile .card_manage:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.493);
+}
+
+.Profile .list_manages {
+    display: flex;
+    height: 80%;
+    width: 30%;
+    position: relative;
+    z-index: 5;
+    transition: all 1s;
+}
+
+.Profile .list_manages .gradient {
+    align-self: flex-end;
+    position: absolute;
+    height: 0%;
+    width: calc(100% - 1rem);
+    background: linear-gradient(360deg, rgb(255, 255, 255) 20%, transparent 40%), linear-gradient(360deg, rgb(255, 255, 255) 30%, transparent 50%), linear-gradient(360deg, rgb(255, 255, 255) 30%, transparent 50%), linear-gradient(360deg, rgb(255, 255, 255) 30%, transparent 50%), linear-gradient(360deg, #ffffff 30%, transparent 50%);
+    transition: all 1s;
+    z-index: 3;
+    height: 100%;
+}
+
+.Profile .direction_column {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    padding: 1rem;
+    z-index: 6;
+
+}

@@ -14,21 +14,28 @@
 .fadeIn {
     opacity: 1;
     backdrop-filter: blur(1px);
-    background: linear-gradient(#00000069, transparent);
+    background: linear-gradient(#000000a5, transparent);
 }
 
 /* Navbar */
 .Navbar {
-    width: 100%;
+    width: 100vw;
     position: fixed;
-    height: 5rem;
-    display: grid;
-    grid-template-areas:
-        "log lin"
-        "bor bor";
+    height: max-content;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     transition: all 0.7s;
     z-index: 9999;
+}
+
+.Navbar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 0;
 }
 
 @keyframes fadeIn {
@@ -40,7 +47,7 @@
     to {
         opacity: 1;
         backdrop-filter: blur(1px);
-        background: linear-gradient(#00000069, transparent);
+        background: linear-gradient(#000000a5, transparent);
     }
 }
 
@@ -71,4 +78,21 @@
     padding: 0;
     position: relative;
     top: -4px;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 499px) {
+    .Navbar-content {
+        display: grid;
+        grid-template-areas:
+        "log lin lin cero"
+        "bor bor bor bor";
+    }
+
+    .fadeIn {
+        opacity: 1;
+        backdrop-filter: blur(2px);
+        background: linear-gradient(#000000, transparent);
+    }
+    
 }

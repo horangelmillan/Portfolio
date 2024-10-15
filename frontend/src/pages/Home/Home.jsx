@@ -1,7 +1,7 @@
 import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import Button from "../../components/Button/Button";
 import ArrowDown from "../../components/SVG/ArrowDown/ArrowDown";
-import LeaveParticles from "../../components/Autumn_Leaves/LeavesParticles";
+/* import LeaveParticles from "../../components/Autumn_Leaves/LeavesParticles"; */
 import './home.css';
 
 const Home = forwardRef(({ props }, ref) => {
@@ -17,10 +17,9 @@ const Home = forwardRef(({ props }, ref) => {
             <section className="main">
                 <div className="title">
                     <span>PORTFOLIO</span>
-                    <h1>Full-Stack Web Development,<br />Design & Animation.</h1>
+                    <h1>Full-Stack Web Development</h1>
                     <span>By Horangel Millan</span>
                 </div>
-
                 <a href="#aboutMe"><ArrowDown href="#aboutMe" /></a>
             </section>
 
@@ -28,7 +27,7 @@ const Home = forwardRef(({ props }, ref) => {
                 <span>Yo</span>
 
                 <p>
-                    Hola. Soy Horangel Millan, un creativo desarrollador web Full-Stack, creo, diseño
+                    Hola Soy Horangel Millan, un creativo desarrollador web Full-Stack, creo, diseño
                     y desarrollo para darle valor a tu producto.
                 </p>
 
@@ -40,7 +39,7 @@ const Home = forwardRef(({ props }, ref) => {
 
             <section>
 
-                <LeaveParticles lot={20} elementActive={true} LeaveRef={'homeRef'}/>
+               
 
             </section>
         </div>

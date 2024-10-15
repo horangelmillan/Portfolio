@@ -9,8 +9,10 @@ const Navbar = ({ contentRef }) => {
 
     return (
         <div className={`Navbar ${isShowNavbar ? 'fadeIn' : 'fadeOut'}`}>
-            <Logo size={"50px"} />
-            <Links contentRef={contentRef} />
+            <div className="Navbar-content">
+                <Logo size={"50px"} />
+                <Links contentRef={contentRef} />
+            </div>
             <div className="border-bottom"></div>
         </div>
     );

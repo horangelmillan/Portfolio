@@ -6,6 +6,7 @@ import switchImg from './slices/switchImg.slice';
 import scrollData from './slices/scrollData.slice';
 import isShowModal from './slices/isShowModal.slice';
 import modalContent from './slices/modalContent.slice';
+import isBurguerMenuOpen from './slices/isBurguerMenuOpen.slice';
 
 export default configureStore({
     reducer: {
@@ -15,6 +16,7 @@ export default configureStore({
         switchImg,
         scrollData,
         isShowModal,
-        modalContent
+        modalContent,
+        isBurguerMenuOpen
     }
 });

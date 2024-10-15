@@ -21,9 +21,9 @@
 
 /* Home */
 .home section:nth-child(1) a {
-    margin: 0 auto;
-    position: relative;
-    top: 2rem;
+    position: absolute;
+    left: calc(50vw - 25px);
+    top: 65vh
 }
 
 .home section:nth-child(1) svg {

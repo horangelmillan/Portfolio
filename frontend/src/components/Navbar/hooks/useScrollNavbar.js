@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-
+import { throttle } from "lodash";
 
 const useScrollNavbar = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -8,7 +8,8 @@ const useScrollNavbar = () => {
     const scrollData = useSelector(state => state.scrollData);
 
     useEffect(() => {
-        const switchShowNavbar = () => {
+        // Función que se ejecutará durante el scroll (limitada por throttle)
+        const switchShowNavbar = throttle(() => {
             if (scrollData <= scrollPosition) {
                 setIsShowNavbar(true);
             } else {
@@ -16,7 +17,7 @@ const useScrollNavbar = () => {
             };
 
             setScrollPosition(scrollData);
-        };
+        }, 500); // Limitar la frecuencia de ejecución a una vez cada 200ms
 
         window.addEventListener('scroll', switchShowNavbar);
 

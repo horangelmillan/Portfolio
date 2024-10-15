@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Login from '../components/Login/Login';
-import Management from '../components/Management/Management';
+import Management from '../components/management/Management';
 import Profile from '../components/Profile/Profile';
 import Signup from '../components/Signup/Signup';
 

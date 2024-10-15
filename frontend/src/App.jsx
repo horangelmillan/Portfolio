@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home, Me, Projects, Contact } from './pages/index';
-import { Navbar, RetractImgs, ScrollBar } from './components/index';
+import { Navbar, RetractImgs } from './components/index';
 import { useRef } from 'react';
 import { ArrowDown } from './components/index';
 import useScrollData from './hooks/useScrollData2';
@@ -18,7 +18,6 @@ function App() {
       <BrowserRouter>
         <Modal />
         <Navbar contentRef={contentRef} />
-        <div className='layout'>
           <RetractImgs />
           <div className='margin-content'>
             <Routes>
@@ -28,13 +27,11 @@ function App() {
               <Route path='/contact' element={<Contact ref={contentRef} />} />
             </Routes>
           </div>
-        </div>
       </BrowserRouter>
       <ArrowDown
         classNameProps={true}
         action={true}
       />
-      <ScrollBar />
     </div>
   );
 };
